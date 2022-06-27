@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "496545795898",
+    "project_id": "pruebafirestore-6520b",
+    "storage_bucket": "pruebafirestore-6520b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496545795898:android:7e3973ec89f75454ae4a03",
+        "android_client_info": {
+          "package_name": "com.ICMA.icma_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496545795898-9giehlhq3krokjm88vats7j53orsg7l2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ICMA.icma_notes",
+            "certificate_hash": "d81cddbe4b3a6c458f80c6b5f6e3522dbd1d4686"
+          }
+        },
+        {
+          "client_id": "496545795898-n6oh3f73tugues8dupql7bruptp22013.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ICMA.icma_notes",
+            "certificate_hash": "4c41cac3923f38482e9c808f4a91cfda653fd90c"
+          }
+        },
+        {
+          "client_id": "496545795898-r8bnsc2ho42h60uskef6o2hmffe3m8cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC89yXFyapDPRiouOwU9axokB8wMZDYoUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496545795898-r8bnsc2ho42h60uskef6o2hmffe3m8cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
