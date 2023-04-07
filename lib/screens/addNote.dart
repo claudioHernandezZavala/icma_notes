@@ -14,17 +14,17 @@ class addnote extends StatelessWidget {
   Widget build(BuildContext context) {
     DateTime date = DateTime.now();
     return Scaffold(
-        backgroundColor: Color(0xFF30475E),
+        backgroundColor: Color(0xFF1A1A2E),
         appBar: AppBar(
           title: const Text(
-            "Agregar Nota",
+            "Add Note",
             style: TextStyle(color: Color(0xFFDDDDDD)),
           ),
           actions: [
             TextButton.icon(
                 label: const Text(
-                  "Guardar",
-                  style: TextStyle(color: Color(0xFF222831)),
+                  "Save",
+                  style: TextStyle(color: Color.fromARGB(255, 8, 128, 175)),
                 ),
                 onPressed: () {
                   CollectionReference referenciaBase2 = FirebaseFirestore
@@ -46,10 +46,11 @@ class addnote extends StatelessWidget {
                 },
                 icon: const Icon(
                   Icons.cloud_upload,
-                  color: Color(0xFF222831),
+                  color: Color.fromARGB(255, 13, 163, 209),
                 ))
           ],
-          backgroundColor: Color(0xFFF05454),
+          backgroundColor: Color(0xFF1A1A2E),
+          elevation: 0,
         ),
         body: Column(
           children: [
@@ -58,27 +59,35 @@ class addnote extends StatelessWidget {
             ),
             Form(
               key: _formKey,
-              child: TextFormField(
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Debe escribir un texto';
-                  }
-                  return null;
-                },
-                controller: titulo,
-                maxLines: null,
-                style: const TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w300,
-                    color: Colors.deepOrange),
-                keyboardType: TextInputType.multiline,
-                decoration: InputDecoration(
-                  hintText: 'Titulo',
-                  hintStyle: TextStyle(color: Colors.white.withOpacity(0.8)),
-                  border: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  prefixIcon: const Icon(Icons.title),
-                  enabledBorder: InputBorder.none,
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(25)),
+                child: TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Debe escribir un texto';
+                    }
+                    return null;
+                  },
+                  controller: titulo,
+                  maxLines: null,
+                  style: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.deepOrange),
+                  keyboardType: TextInputType.multiline,
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    hintText: 'Title',
+                    hintStyle: TextStyle(color: Colors.black.withOpacity(0.8)),
+                    border: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    prefixIcon: const Icon(Icons.title),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25)),
+                  ),
                 ),
               ),
             ),
@@ -86,25 +95,34 @@ class addnote extends StatelessWidget {
               color: Colors.black26,
               thickness: 2,
             ),
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
                 maxLines: null,
+                minLines: 10,
                 keyboardType: TextInputType.multiline,
                 controller: contenido,
+                textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.orangeAccent),
                 decoration: InputDecoration(
-                    hintText: 'Contenido',
-                    prefixIcon: Icon(
-                      Icons.text_snippet_sharp,
-                      // color: Colors.white,
-                    ),
-                    prefixIconColor: Colors.red,
-                    border: InputBorder.none,
-                    focusColor: Colors.red,
-                    focusedBorder: InputBorder.none,
-                    hintStyle: TextStyle(color: Colors.white.withOpacity(0.8)),
-                    enabledBorder: InputBorder.none,
-                    hintMaxLines: 10),
+                  hintText: 'Content',
+                  prefixIcon: Icon(
+                    Icons.text_snippet_sharp,
+                    // color: Colors.white,
+                  ),
+                  filled: true,
+                  alignLabelWithHint: true,
+                  fillColor: Colors.white,
+                  prefixIconColor: Colors.red,
+                  border: InputBorder.none,
+                  focusColor: Colors.red,
+                  focusedBorder: InputBorder.none,
+                  hintStyle: TextStyle(
+                    color: Colors.black.withOpacity(0.8),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25)),
+                ),
               ),
             ),
           ],

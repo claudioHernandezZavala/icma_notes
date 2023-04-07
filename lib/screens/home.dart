@@ -25,7 +25,7 @@ class _homeState extends State<home> {
       backgroundColor: const Color(0xFF1A1A2E),
       drawer: const drawer(),
       appBar: AppBar(
-        title: const Text("Tus notas"),
+        title: const Text("Your notes"),
         centerTitle: true,
         backgroundColor: const Color(0xDDDDDD),
       ),
@@ -70,7 +70,7 @@ class _homeState extends State<home> {
                     width: 300,
                   ),
                   const Text(
-                    "No tienes notas aun",
+                    "You don't have notes yet",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ],
@@ -88,15 +88,15 @@ class _homeState extends State<home> {
                   actions: [
                     IconSlideAction(
                       foregroundColor: const Color(0xFFFF5200),
-                      caption: "Eliminar",
-                      color: const Color(0xFF8C0000),
+                      caption: "Delete",
+                      color: Color.fromARGB(255, 228, 4, 4),
                       icon: Icons.delete,
                       onTap: () {
                         document.reference.delete();
                       },
                     ),
                     IconSlideAction(
-                      caption: "Modificar",
+                      caption: "Modify",
                       color: const Color(0xFF007965),
                       icon: Icons.mode_edit,
                       foregroundColor: const Color(0xFF00A1AB),

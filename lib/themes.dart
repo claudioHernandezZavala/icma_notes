@@ -6,6 +6,7 @@ class myThemes {
       colorScheme: ColorScheme.dark());
 
   final light = ThemeData(
+      appBarTheme: AppBarTheme(),
       scaffoldBackgroundColor: Color(0xFFF0E4D7),
       colorScheme: ColorScheme.light());
 }
